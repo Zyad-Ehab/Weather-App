@@ -136,28 +136,23 @@ Free Tier Limits
 Data updates every ~10 minutes
 
 📁 Project Structure
-weather_app/
-├── lib/
-│   ├── main.dart
-│   ├── models/
-│   │   ├── weather_model.dart
-│   │   ├── favorite_city.dart
-│   │   └── app_settings.dart
-│   ├── providers/
-│   │   ├── weather_provider.dart
-│   │   ├── favorites_provider.dart
-│   │   └── settings_provider.dart
-│   ├── services/
-│   │   └── weather_service.dart
-│   ├── screens/
-│   │   ├── home_screen.dart
-│   │   ├── details_screen.dart
-│   │   ├── favorites_screen.dart
-│   │   └── settings_screen.dart
-│   ├── widgets/
-│   └── utils/
-│       ├── config.dart
-│       └── helpers.dart
+
+lib/
+├── config/
+│   └── api_config.dart          # API configuration (API key)
+├── models/
+│   ├── weather_model.dart       # Weather data model
+│   └── app_state.dart           # Application state model
+├── pages/
+│   ├── home_page.dart           # Home/Search screen
+│   ├── weather_details_page.dart # Weather details screen
+│   ├── favorites_page.dart      # Favorites screen
+│   └── settings_page.dart       # Settings screen
+├── services/
+│   ├── api_service.dart         # OpenWeatherMap API integration
+│   ├── storage_service.dart     # Local storage operations
+│   └── weather_provider.dart    # State management provider
+└── main.dart                    # App entry point
 
 ▶️ Running the App
 
